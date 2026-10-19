@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Решение алгоритмической задачи</title>
+  </head>
+
+  <body bgcolor="#F3E8FF">
+    <center>
+      <h1>💜 Решение алгоритмической задачи 💜</h1>
+
+      <hr color="#C8A2C8" width="80%" />
+
+      <h2>Условие задачи</h2>
+
+      <p>Дано вещественное число A.</p>
+
+      <p>Вычислить X:</p>
+
+      <p>
+        Если A > 100, то X = 0.<br />
+        Если A < 61, то X = A.<br />
+        В остальных случаях X = A⁴.
+      </p>
+
+      <h2>Введите число A:</h2>
+
+      <input type="number" id="number_a" step="any" />
+
+      <button id="calculate">Вычислить</button>
+
+      <h2>Результат:</h2>
+
+      <p id="result">Здесь появится ответ</p>
+
+      <hr color="#C8A2C8" width="80%" />
+
+      <p>
+        <a href="index.html">🏠 Вернуться на главную</a>
+      </p>
+    </center>
+
+    <script>
+      const button = document.getElementById("calculate");
+
+      button.addEventListener("click", function () {
+        const a = Number(document.getElementById("number_a").value);
+
+        let x;
+
+        if (a > 100) {
+          x = 0;
+        } else if (a < 61) {
+          x = a;
+        } else {
+          x = a ** 4;
+        }
+
+        document.getElementById("result").textContent = "X = " + x;
+      });
+    </script>
+  </body>
+</html>
